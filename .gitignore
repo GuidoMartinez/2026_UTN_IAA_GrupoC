@@ -1,0 +1,19 @@
+# Dataset descargado
+dataset_raw/
+dataset_split/
+
+# Modelos pesados
+*.keras
+*.h5
+
+# Google / Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+*.7z
+*.zip
