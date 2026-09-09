@@ -3,7 +3,6 @@ dataset_raw/
 dataset_split/
 
 # Modelos pesados
-*.keras
 *.h5
 
 # Google / Python
@@ -17,3 +16,23 @@ Thumbs.db
 
 *.7z
 *.zip
+
+# Credenciales y sesiones locales (no publicar)
+.env
+.env.*
+!.env.example
+credentials.json
+client_secret*.json
+service-account*.json
+service_account*.json
+token.json
+*.pem
+*.key
+.credentials/
+.config/gcloud/
+
+# Copias temporales de imagenes procesadas
+dataset_split_object_detection_crop/
+dataset_recortado/
+dataset_sin_recorte/
+iaa_work/
