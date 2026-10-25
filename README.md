@@ -1,93 +1,43 @@
-# Inteligencia Artificial Avanzada — Grupo C
+# Inteligencia Artificial Avanzada - Grupo C
 
-Repositorio correspondiente al Trabajo Práctico Integral de **Inteligencia Artificial Avanzada — UTN FRBA**.
+Trabajo Práctico Integral de **Inteligencia Artificial Avanzada, UTN FRBA**.
 
-El proyecto aborda la **identificación automática de especies vegetales a partir de imágenes** mediante técnicas de Inteligencia Artificial y su posterior clasificación regional como **Nativa o Exótica en la Provincia de Buenos Aires**.
+## Objetivo
 
-La solución se organiza en entregas incrementales. Cada etapa parte de los resultados obtenidos previamente e incorpora nuevas técnicas, experimentos y mejoras sobre el prototipo.
+Identificar una de ocho especies vegetales a partir de una fotografía y consultar un catálogo botánico para informar su condición como **Nativa o Exótica en la Provincia de Buenos Aires**.
 
----
+`Imagen RGB -> Clasificación de especie -> Catálogo regional -> Nativa / Exótica`
 
-## Estructura del repositorio
+El proyecto utiliza imágenes de iNaturalist y evoluciona desde redes convolucionales entrenadas desde cero hasta modelos preentrenados con ajuste fino.
 
-```text
-.
-├── Entrega_2/
-│   ├── informe/
-│   ├── notebooks/
-│   ├── dataset/
-│   └── README.md
-│
-└── Entrega_3/
-    └── ...
-```
+## Entrega 2: clasificación mediante CNN
 
-Cada carpeta contiene los archivos correspondientes a una entrega específica del Trabajo Práctico.
+Se evaluaron tres configuraciones: CNN con Flatten, CNN con GlobalAveragePooling2D y CNN con Data Augmentation. Se trabajó con 3.200 imágenes de ocho especies.
 
----
+El **Experimento 2, CNN con GlobalAveragePooling2D**, fue seleccionado como prototipo de esta etapa, con **61,12 % de accuracy y 59,75 % de macro-F1 por especie en test**.
 
-## Entrega 2 — Prototipo de clasificación mediante CNN
+[Descripción de Entrega 2](Entrega_2/README.md) | [Informe](Entrega_2/informe/IA_Avanzada_GrupoC_Entrega2.pdf) | [Notebooks](Entrega_2/notebooks/)
 
-La **Entrega 2** desarrolla una prueba de concepto para identificar una de ocho especies vegetales mediante Redes Neuronales Convolucionales.
+## Entrega 3: evolución del prototipo
 
-Se evaluaron tres configuraciones sobre el mismo dataset y la misma partición de entrenamiento, validación y prueba:
+Se exploraron recortes con Object Detection, tasa de aprendizaje adaptable, Transfer Learning con MobileNetV2, fine-tuning y augmentation suave.
 
-1. **CNN con Flatten**
-   - Utilizada como línea base.
-   - Presentó un marcado sobreajuste.
+La versión final es el **Experimento 8, MobileNetV2 con fine-tuning parcial y augmentation suave**, seleccionado por su menor pérdida de validación. Obtuvo **77,25 % de accuracy y 77,25 % de macro-F1 por especie en test**.
 
-2. **CNN con GlobalAveragePooling2D**
-   - Redujo significativamente la cantidad de parámetros entrenables.
-   - Obtuvo el mejor desempeño sobre el conjunto de prueba.
-   - Fue seleccionada como prototipo final de la Entrega 2.
+[Descripción de Entrega 3](Entrega_3/README.md) | [Informe](Entrega_3/informe/IA_Avanzada_GrupoC_Entrega3.pdf) | [Notebooks](Entrega_3/notebooks/) | [Resultados](Entrega_3/resultados/)
 
-3. **CNN con GlobalAveragePooling2D + Data Augmentation**
-   - Incorporó transformaciones aleatorias durante el entrenamiento.
-   - Redujo la brecha entre entrenamiento y validación.
-   - No superó al Experimento 2 sobre el conjunto de prueba.
+## Contenido del repositorio
 
-La Entrega 2 incluye:
+| Carpeta | Contenido |
+|---|---|
+| [Entrega_2](Entrega_2/) | Informe, tres notebooks y documentación del dataset. |
+| [Entrega_3](Entrega_3/) | Informe, siete notebooks y resultados por experimento. |
 
-- notebooks correspondientes a los tres experimentos;
-- manifest y documentación del dataset;
-- resultados y métricas de evaluación incluidos en los notebooks;
-- informe final de la entrega.
+## Tecnologías
 
-➡️ Ver [`Entrega_2/`](./Entrega_2/)
+Python, Google Colab, TensorFlow/Keras, Scikit-learn, Pandas, NumPy, Matplotlib, Pillow y API de iNaturalist.
 
----
-
-## Entrega 3 — Evolución del sistema
-
-La carpeta **Entrega_3** contendrá la evolución del prototipo desarrollado en la Entrega 2.
-
-Las mejoras serán definidas a partir de los resultados y limitaciones detectadas en la etapa anterior, incorporando nuevas técnicas y comparando su desempeño contra el prototipo seleccionado.
-
-➡️ Ver [`Entrega_3/`](./Entrega_3/)
-
----
-
-## Flujo general del sistema
-
-```text
-Imagen de una planta
-        ↓
-Modelo de Inteligencia Artificial
-        ↓
-Identificación de especie
-        ↓
-Consulta de catálogo botánico regional
-        ↓
-Nativa / Exótica
-```
-
-La condición regional no se infiere directamente a partir de la imagen.
-
-El modelo identifica la especie y posteriormente se consulta un catálogo botánico para determinar su condición en la Provincia de Buenos Aires.
-
----
-
-## Integrantes — Grupo C
+## Integrantes
 
 - Guido Julián Martinez
 - Gonzalo Duarte
@@ -95,32 +45,3 @@ El modelo identifica la especie y posteriormente se consulta un catálogo botán
 - Camila Lazzati
 - Fidel Ibire
 - Federico Ascorti
-
----
-
-## Tecnologías utilizadas
-
-- Python
-- Google Colab
-- TensorFlow / Keras
-- Pandas
-- Scikit-learn
-- Matplotlib
-- Pillow
-- iNaturalist API
-
----
-
-## Organización por entregas
-
-Cada entrega posee su propio `README.md` con información específica sobre:
-
-- objetivo;
-- metodología;
-- experimentos realizados;
-- dataset utilizado;
-- resultados;
-- notebooks asociados;
-- informe correspondiente.
-
-El objetivo de este README raíz es mantener una visión general del proyecto y facilitar la navegación entre las distintas etapas del Trabajo Práctico.

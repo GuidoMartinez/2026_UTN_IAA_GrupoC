@@ -1,0 +1,66 @@
+{
+  "run_name": "run_20260905_151001_exp4_img224_bs32_lr0.001",
+  "timestamp": "20260905_151001",
+  "experiment_number": 4,
+  "experiment_id": "exp4_object_detection_crop_cnn_gap",
+  "experiment_title": "Object Detection/recorte + CNN GAP",
+  "seed": 42,
+  "img_size": 224,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "epochs_configured": 200,
+  "epochs_executed": 76,
+  "best_val_loss_epoch": 66,
+  "n_species": 8,
+  "n_train": 1920,
+  "n_val": 480,
+  "n_test": 800,
+  "object_detection_model_url": "https://tfhub.dev/tensorflow/ssd_mobilenet_v2/2",
+  "detection_class_ids": [
+    64
+  ],
+  "detection_score_threshold": 0.25,
+  "crop_padding": 0.1,
+  "crop_detection_rate": 0.355,
+  "crop_methods": {
+    "full_image_fallback": 2064,
+    "object_detection": 1136
+  },
+  "base_classifier": "CNN_GAP_desde_cero",
+  "transfer_learning": false,
+  "fine_tuning": false,
+  "trainable_params": 110792,
+  "non_trainable_params": 0,
+  "total_params": 110792,
+  "test_loss": 1.2659707069396973,
+  "test_accuracy_metric": 0.5712500214576721,
+  "species_accuracy": 0.57125,
+  "species_macro_f1": 0.5654905492979071,
+  "condition_accuracy": 0.7625,
+  "condition_macro_f1": 0.7623202546926113,
+  "classes": [
+    "Cortaderia_selloana",
+    "Erythrina_crista-galli",
+    "Gleditsia_triacanthos",
+    "Iris_pseudacorus",
+    "Ligustrum_lucidum",
+    "Melia_azedarach",
+    "Passiflora_caerulea",
+    "Phytolacca_dioica"
+  ],
+  "dataset_partition_sha256": "40e8690e3867c1d19efd28795f6e58f78b9e9e60896ef68ae7dc0e4cd3e1def6",
+  "audit": {
+    "status": "internally_consistent_same_partition_as_5",
+    "note": "Metricas verificadas contra predicciones. Mismas 3200 observaciones, fotografias y particiones que el Experimento 5. La igualdad con los splits de Entrega 2 no esta certificada por los archivos por corrida disponibles. No implica una evaluacion externa nunca consultada.",
+    "comparison_with_5": {
+      "reference_experiment": "exp5_transfer_learning_mobilenetv2",
+      "common_observations": 3200,
+      "common_photographs": 3200,
+      "observations_reassigned": 0,
+      "test_previously_in_source_train": 0,
+      "validation_previously_in_source_train": 0
+    },
+    "original_metrics_preserved": true,
+    "original_json_sha256": "71122fa3577daba200234616f5e157ce4c5b00c7c8934a07651d73b3f9d96823"
+  }
+}

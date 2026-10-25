@@ -1,0 +1,5 @@
+Conjunto,Cantidad,Porcentaje
+Entrenamiento,1920,60.0
+Validación,480,15.0
+Prueba,800,25.0
+Total,3200,100.0

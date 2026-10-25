@@ -1,0 +1,58 @@
+{
+  "run_name": "run_20260908_013049_exp4_img224_bs32_lr0.001",
+  "timestamp": "20260908_013049",
+  "experiment_number": 4,
+  "experiment_id": "exp4b_object_detection_crop_cnn_gap_lr",
+  "experiment_title": "Exp. 4B - Object Detection + CNN GAP con LR adaptable",
+  "seed": 42,
+  "img_size": 224,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "epochs_configured": 200,
+  "epochs_executed": 100,
+  "best_val_loss_epoch": 88,
+  "n_species": 8,
+  "n_train": 1920,
+  "n_val": 480,
+  "n_test": 800,
+  "object_detection_model_url": "https://tfhub.dev/tensorflow/ssd_mobilenet_v2/2",
+  "detection_class_ids": [
+    64
+  ],
+  "detection_score_threshold": 0.25,
+  "crop_padding": 0.1,
+  "crop_detection_rate": 0.356875,
+  "crop_methods": {
+    "full_image_fallback": 2058,
+    "object_detection": 1142
+  },
+  "base_classifier": "CNN_GAP_desde_cero",
+  "transfer_learning": false,
+  "fine_tuning": false,
+  "trainable_params": 110792,
+  "non_trainable_params": 0,
+  "total_params": 110792,
+  "test_loss": 1.219027042388916,
+  "test_accuracy_metric": 0.5762500166893005,
+  "species_accuracy": 0.57625,
+  "species_macro_f1": 0.5760121341136859,
+  "condition_accuracy": 0.77375,
+  "condition_macro_f1": 0.7737326764080374,
+  "classes": [
+    "cortaderia_selloana",
+    "erythrina_crista_galli",
+    "gleditsia_triacanthos",
+    "iris_pseudacorus",
+    "ligustrum_lucidum",
+    "melia_azedarach",
+    "passiflora_caerulea",
+    "phytolacca_dioica"
+  ],
+  "dataset_partition_sha256": "9f1e5b4b84209cc4c2733bb23a862b3235a21d9252b77a14458e77946f8488dc",
+  "audit": {
+    "status": "different_dataset_not_controlled_comparison",
+    "note": "Corrida actual: accuracy 57.625 %, 100 epocas, mejor epoca 88. Dataset y particiones distintos de 4/4C/5; no es una ablacion controlada. Se retiraron del notebook las salidas de otra corrida.",
+    "original_metrics_preserved": true,
+    "original_json_sha256": "b075d94a4472f8e92bc5108c7e71449f6a25246c99226e8d2de6b07084501f56"
+  }
+}

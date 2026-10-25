@@ -1,0 +1,8 @@
+{
+  "selection_monitor": "val_loss",
+  "best_epoch": 22,
+  "loss": 0.7121626734733582,
+  "species_accuracy": 0.7749999761581421,
+  "species_macro_f1": 0.7764999777929603,
+  "augmentation_applied": false
+}

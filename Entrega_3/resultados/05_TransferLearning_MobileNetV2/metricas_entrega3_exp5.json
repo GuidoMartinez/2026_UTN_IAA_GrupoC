@@ -1,0 +1,62 @@
+{
+  "run_name": "run_20260908_144525_973750_exp5_transfer_learning_mobilenetv2",
+  "timestamp": "20260908_144525_973750",
+  "experiment_number": 5,
+  "experiment_id": "exp5_transfer_learning_mobilenetv2",
+  "experiment_title": "Exp. 5 - Transfer Learning MobileNetV2",
+  "seed": 42,
+  "img_size": 224,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "epochs_configured": 200,
+  "epochs_executed": 17,
+  "best_val_loss_epoch": 5,
+  "n_species": 8,
+  "n_train": 1920,
+  "n_val": 480,
+  "n_test": 800,
+  "object_detection_enabled": false,
+  "object_detection_model_url": null,
+  "detection_class_ids": [
+    64
+  ],
+  "detection_score_threshold": 0.25,
+  "crop_padding": 0.1,
+  "crop_detection_rate": 0.0,
+  "crop_methods": {
+    "full_image_fallback": 3200
+  },
+  "base_classifier": "MobileNetV2",
+  "pretrained_weights": "imagenet",
+  "base_model_trainable": false,
+  "preprocessing": "RGB_0_255_a_menos1_1",
+  "transfer_learning": true,
+  "fine_tuning": false,
+  "trainable_params": 165000,
+  "non_trainable_params": 2257984,
+  "total_params": 2422984,
+  "test_loss": 0.7612058520317078,
+  "test_accuracy_metric": 0.7487499713897705,
+  "species_accuracy": 0.74875,
+  "species_macro_f1": 0.7448072825051963,
+  "condition_accuracy": 0.84625,
+  "condition_macro_f1": 0.8454654959316907,
+  "classes": [
+    "Cortaderia_selloana",
+    "Erythrina_crista-galli",
+    "Gleditsia_triacanthos",
+    "Iris_pseudacorus",
+    "Ligustrum_lucidum",
+    "Melia_azedarach",
+    "Passiflora_caerulea",
+    "Phytolacca_dioica"
+  ],
+  "dataset_partition_sha256": "40e8690e3867c1d19efd28795f6e58f78b9e9e60896ef68ae7dc0e4cd3e1def6",
+  "model_sha256": "80a97412d1f9599d223d86aa750eb33097f6c412a70e67d6f646169ca349b412",
+  "audit": {
+    "status": "internally_consistent_same_partition_as_4_4c",
+    "note": "Mismas observaciones, fotografias y particiones que 4 y 4C. El 6 corregido usa esta exportacion del 5. Accuracy y macro-F1 coinciden con los CSV.",
+    "original_metrics_preserved": true,
+    "original_json_sha256": "7406767f19eb18c5a9b894d4979d5161aa5828e4655155a83e5f830562bed183"
+  }
+}

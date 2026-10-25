@@ -35,4 +35,7 @@ token.json
 dataset_split_object_detection_crop/
 dataset_recortado/
 dataset_sin_recorte/
-iaa_work/
+auxiliares/
+
+# Informe editable de Entrega 3 (solo local)
+/Entrega_3/informe/*.docx
